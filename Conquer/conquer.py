@@ -33,10 +33,10 @@ def majority_element2(A):
         i = 0
         while i < len(A) - 1:
             if A[i] == A[i + 1]:
-                reduced.append(A[i])# Αν είναι ίδια,κρατάμε το ένα
+                reduced.append(A[i])#Αν είναι ίδια,κρατάμε το ένα
             #Αν είναι διαφορετικά,απορρίπτουμε και τα δύο
             i += 2
-        # Αν το μήκος είναι περιττό
+        #Αν το μήκος είναι περιττό
         if len(A) % 2 == 1:
             reduced.append(A[-1])
         return reduced
@@ -46,7 +46,7 @@ def majority_element2(A):
         if len(A) == 1:
             return A[0]#Μόνο ένα στοιχείο
         if len(A) == 0:
-            return None #Κενή λίστα
+            return None#Κενή λίστα
         reduced = reduce_pairs(A)
         return find_candidate(reduced)
 
